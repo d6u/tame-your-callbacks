@@ -1,2 +1,3 @@
 node_modules/
 lib/s3-cred.json
+lib/mail-cred.json

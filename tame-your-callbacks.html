@@ -30,13 +30,57 @@
 </div></div>
 <div class="sl-block" data-block-type="text" data-block-id="c9114151a0f2355c7a13493b93761bc4" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 367px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: center; font-size: 137%;">
 <p>Using Promise with Bluebird.js</p>
+</div></div></section><section><div class="sl-block" data-block-type="text" data-block-id="6ae46994265125dbf7a0eb4af33421bc" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<h1>Daiwei</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bb3c391a057f49d194314e68c3db884e" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 278px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;">
+<h3><a href="https://twitter.com/daiweilu" target="_blank">@daiweilu</a></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 348px;" data-block-id="7e67840815c3ff2c88063577915ba242"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left;">
+<h3><a href="http://github.com/d6u" target="_blank">github.com/d6u</a></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7b68b6534f73c222468ca0c8e9aeee75" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 418px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<h3 style="text-align: left;"><a href="http://daiwei.lu" target="_blank">http://daiwei.lu</a></h3>
+</div></div></section><section><div class="sl-block" data-block-type="text" data-block-id="5cb0140cb48fdd081151594f7d05ca79" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 210px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 119%;">
+<ul>
+	<li style="text-align:left">A callback problem</li>
+	<li style="text-align:left">Recap what Promise is</li>
+	<li style="text-align:left">Introduction of Bluebird.js</li>
+	<li style="text-align:left">Use Bluebird to solve our callback problem</li>
+	<li style="text-align:left">More features of Bluebird</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0a52104801b28abcc73b96641c198e23" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 33px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2><span>Agenda</span></h2>
+</div></div></section><section data-id="e9fa5937ad3da53db83b2d505ecf695f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="47a36ca14a1f96726ca028feaf997d50"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
+<h2>Why should we care?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="9ca97948f03f5ccc17ef094d3fc64c47"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="text-align: left;">
+<p>Besides all the benefits we already mentioned</p>
+
+<ul>
+	<li>ES6 natively supports Promise class</li>
+	<li>More and more APIs support the promise interface
+	<ul>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">fetch() </a></li>
+		<li>jQuery has supported Thenables for a long time
+		<ul>
+			<li>$.get(url).then()</li>
+		</ul>
+		</li>
+		<li>Selenium Webdriver</li>
+		<li>... a lot more</li>
+	</ul>
+	</li>
+	<li>ES7 async/await works with promise</li>
+</ul>
 </div></div></section><section class="has-light-background" data-background-color="#ffffff" data-id="c240340c1934420d5ce3949c4f367f8d"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="0fe8c6e1953eb3aba758678f8a608010">
     <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
         <h2>Callbacks</h2>
     </div>
 </div>
-<div class="sl-block" data-block-type="code" data-block-id="3bf55aec257f475e3a26db93a119540b" style="min-width: 30px; min-height: 30px; width: 800px; height: 290px; left: 80px; top: 205px;">
-    <div class="sl-block-content" style="z-index: 12; border-width: 1px;">
+<div class="sl-block" data-block-type="code" data-block-id="3bf55aec257f475e3a26db93a119540b" style="min-width: 30px; min-height: 30px; width: 800px; height: 490px; left: 80px; top: 140px;">
+    <div class="sl-block-content" style="z-index: 12; border-width: 1px; font-size: 157%;">
         <pre><code>// Node style callback
 fs.readFile(filePath, function (err, buf) {
 
@@ -53,7 +97,7 @@ setTimeout(function () {
 }, 1000);</code></pre>
     </div>
 </div></section><section data-id="283242c5727ce6e94b9c58ba0fb5dca2"><div class="sl-block" data-block-type="text" style="width: 888px; left: 36px; top: 33px; height: auto;" data-block-id="225306ef5b8d738a4ac8627b645ed2d4"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: center; z-index: 11;">
-<h2>Say, you want to...</h2>
+<h2>Say, I want to...</h2>
 </div></div>
 <div class="sl-block" data-block-type="text" style="width: 640px; left: 160px; top: 210px; height: auto;" data-block-id="d537cf74dc486b97b74f5957d113d7f2"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec metus justo. Aliquam erat volutpat." style="z-index: 13; text-align: left;">
 <p><span style="font-size:32px">1. Read a JSON file</span></p>
@@ -80,23 +124,23 @@ setTimeout(function () {
 </div></div></section><section data-id="c2ccd0c9bec88a66bd8490c8f498f2f9"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 302px; height: auto;" data-block-id="ec00cd21e3746b3b1559da1a6d57ea4b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
 <h1>Promise to the Rescue</h1>
 </div></div></section><section data-id="1f3fa668637cb319bb9cdaf2abf6f725"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 33px; height: auto;" data-block-id="a4e41c9d3081953bc72f1b74b52f25d3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
-<h2>Let's recap what is promise</h2>
+<h2>Let's recap what promise is</h2>
 </div></div>
-<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 210px; height: auto;" data-block-id="a94659c06ae735b1630a952cbffdbd4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="">
-<p style="text-align:left"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">MDN writes</a></p>
+<div class="sl-block" data-block-type="text" style="width: 877px; left: 42px; top: 165px; height: auto;" data-block-id="a94659c06ae735b1630a952cbffdbd4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="font-size: 132%;">
+<p style="text-align:left"><span style="font-size:48px"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">MDN writes</a></span></p>
 
-<p style="text-align:left"><em><span style="font-size:24px">The Promise object is used for deferred and asynchronous computations. A Promise is in one of these states:</span></em></p>
+<p style="text-align:left"><span style="font-size:32px"><em>The Promise object is used for deferred and asynchronous computations. A Promise is in one of these states:</em></span></p>
 
 <ul>
-	<li style="text-align:left"><em><span style="font-size:24px"><strong>pending</strong>: initial state, not fulfilled or rejected.</span></em></li>
-	<li style="text-align:left"><em><span style="font-size:24px"><strong>fulfilled</strong>: successful operation.</span></em></li>
-	<li style="text-align:left"><em><span style="font-size:24px"><strong>rejected</strong>: failed operation.</span></em></li>
-	<li style="text-align:left"><em><span style="font-size:24px"><strong>settled</strong>: the Promise is either fulfilled or rejected, but not pending.</span></em></li>
+	<li style="text-align:left"><span style="font-size:32px"><em><strong>pending</strong>: initial state, not fulfilled or rejected.</em></span></li>
+	<li style="text-align:left"><span style="font-size:32px"><em><strong>fulfilled / resolved</strong>: successful operation.</em></span></li>
+	<li style="text-align:left"><span style="font-size:32px"><em><strong>rejected</strong>: failed operation.</em></span></li>
+	<li style="text-align:left"><span style="font-size:32px"><em><strong>settled (resolved or rejected)</strong>: the Promise is either fulfilled or rejected, but not pending.</em></span></li>
 </ul>
 </div></div></section><section data-id="06ba294dfc5702e8f524894f3fb58a96"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 33px; height: auto;" data-block-id="93736f4b34d1c9fc9633d2dd3abea475"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" dir="ui" style="z-index: 10;">
 <h2>Skip that crap, how do I code it?</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="751f4fcdb66f02193b5a0accf68c7c14" style="min-width: 30px; min-height: 30px; width: 800px; height: 490px; left: 80px; top: 140px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>var p = createPromise();
+<div class="sl-block" data-block-type="code" data-block-id="751f4fcdb66f02193b5a0accf68c7c14" style="min-width: 30px; min-height: 30px; width: 960px; height: 560px; left: 0px; top: 140px;"><div class="sl-block-content" style="z-index: 12; font-size: 116%;"><pre><code>var p = createPromise();
 
 // .then() returns a new promise, so you can chain them
 p.then(function () {
@@ -121,14 +165,14 @@ p.then(function () {
 
 // When you chain them, it looks like a pipe</code></pre></div></div></section><section data-id="df81e44932761dbe035818c4b9740091">
 <div class="sl-block" data-block-type="text" data-block-id="0790934322c33000202660257e659f28" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 276px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
-<h2>Imagine we have promise instead of callbacks</h2>
+<h2>Imagine we have promises instead of callbacks</h2>
 </div></div></section><section data-id="3bff106dc90ddc239f87cabe580f0053"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 177px; height: auto;" data-block-id="288deee7fc0b573369b6bb5706fe6d5c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
 <h1 style="text-align:left">Looks good!<br>
 But <span style="color:#FF0000">not</span> all modules </h1>
 
 <h1 style="text-align:left">
-<span style="color:#FF0000">return promise</span> ...</h1>
-</div></div></section><section data-id="4b909864eb35e196e1d15a5cda0b13fe"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 0px; height: auto;" data-block-id="c7d87dc3409a2732a3c2a29cdafa7de3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<span style="color:#FF0000">return Promise</span> ...</h1>
+</div></div></section><section data-id="4b909864eb35e196e1d15a5cda0b13fe"><div class="sl-block" data-block-type="text" style="width: 958px; left: 1px; top: 0px; height: auto;" data-block-id="c7d87dc3409a2732a3c2a29cdafa7de3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; border-width: 1px;">
 <h2>Let's change the world </h2>
 
 <h2>with <s>love</s> Promises!</h2>
@@ -136,7 +180,7 @@ But <span style="color:#FF0000">not</span> all modules </h1>
 <div class="sl-block" data-block-type="text" style="width: 736px; left: 80px; top: 165px; height: auto;" data-block-id="d3f6c259c8299853c327b578d5519792"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="text-align: left; z-index: 11;">
 <p>Convert callback style into promise style using <span style="color:#FF0000">Promise constructor </span>from ES6 standard</p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="a0792618a3c47a5c396813adec5dd91b" style="min-width: 30px; min-height: 30px; width: 800px; height: 377px; left: 80px; top: 263px;"><div class="sl-block-content" style="z-index: 13;"><pre><code>function readFile(path) {
+<div class="sl-block" data-block-type="code" data-block-id="a0792618a3c47a5c396813adec5dd91b" style="min-width: 30px; min-height: 30px; width: 959px; height: 447px; left: 0px; top: 253px;"><div class="sl-block-content" style="z-index: 13; font-size: 122%;"><pre><code>function readFile(path) {
   // ES6 API
   return new Promise(function (resolve, reject) {
     fs.readFile(path, function (err, buf) {
@@ -153,29 +197,30 @@ readFile(filePath)
   .then(function (buf) {
   })
   .catch(function (err) {
-  });</code></pre></div></div></section><section data-id="ee3889d45ee5c0a05731488b34ba80cf"><div class="sl-block" data-block-type="text" data-block-id="131573771a90bf5cbb909805398f1d6a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 140px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+  });</code></pre></div></div></section><section data-id="ee3889d45ee5c0a05731488b34ba80cf"><div class="sl-block" data-block-type="text" data-block-id="131573771a90bf5cbb909805398f1d6a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 124px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p style="text-align:left"><a href="https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyfunction-nodefunction--dynamic-receiver---function" target="_blank">Bluebird.promisify</a></p>
 
 <p style="text-align:left"><a href="https://github.com/petkaantonov/bluebird/blob/master/API.md#promisepromisifyallobject-target--object-options---object" target="_blank">Bluebird.promisifyAll</a></p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="9425cab4e23b9c56f40aa7a44cdde189" style="min-width: 30px; min-height: 30px; width: 800px; height: 350px; left: 80px; top: 280px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>// Original
+<div class="sl-block" data-block-type="code" data-block-id="9425cab4e23b9c56f40aa7a44cdde189" style="min-width: 30px; min-height: 30px; width: 960px; height: 477px; left: 0px; top: 223px;"><div class="sl-block-content" style="z-index: 12; font-size: 146%;"><pre><code>// Original
 fs.readFile(path, function (err, buf) {
 });
 
 // Promisify
 readFileAsync = Bluebird.promisify(fs.readFile);
 
-readFileAsync()
+readFileAsync(filePath)
   .then(function (buf) {})
   .catch(function (err) {});
 
 // Promisify All
 var fs = Bluebird.promisifyAll(fs);
 
-fs.readFileAsync();
-fs.writeFileAsync();</code></pre></div></div>
+fs.readFileAsync(filePath);
+fs.writeFileAsync(filePath);</code></pre></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="5bf722048e526a4a71350be3bb3fc5e9" style="height: auto; min-width: 30px; min-height: 30px; width: 864px; left: 48px; top: 33px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
-<h2>Bluebird Convenient Methods</h2>
+<h2>
+<span>Convenient </span>Bluebird Methods</h2>
 </div></div></section><section class="stack" data-id="d294dfe1533d7b85bf4cad0febc5989e"><section data-id="b6009d24dc87d356aaa7f8207198ee5d"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 33px; height: auto;" data-block-id="9d73eaae5d2b65e5d3d71493dd695524"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
 <h2>Some Useful Bluebird Methods</h2>
 </div></div>
@@ -209,15 +254,15 @@ fs.writeFileAsync();</code></pre></div></div>
 	<pre>...there are tons of others</pre>
 	</li>
 </ul>
-</div></div></section><section data-id="a9df8b45cc3244ab917521cc52e3685e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="9487709ad9dfcc06eeeac359da9412af"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;">
+</div></div></section><section data-id="a9df8b45cc3244ab917521cc52e3685e"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="9487709ad9dfcc06eeeac359da9412af"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Make Everybody Happy</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="33620668514b1fabcc51db09e3f32249" style="min-width: 30px; min-height: 30px; width: 800px; height: 339px; left: 80px; top: 181px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>function getSomethingForMe(url, callback) {
+<div class="sl-block" data-block-type="code" data-block-id="33620668514b1fabcc51db09e3f32249" style="min-width: 30px; min-height: 30px; width: 960px; height: 560px; left: 0px; top: 140px;"><div class="sl-block-content" style="z-index: 0; font-size: 165%; border-width: 1px;"><pre class="none"><code>function getSomethingForMe(url, callback) {
   return request.getAsync(url).nodeify(callback);
 }
 
 // Use its callback
-getSomethingForMe('url'}, function (err, res) {
+getSomethingForMe('url', function (err, res) {
 });
 
 // Use its promise
@@ -229,7 +274,7 @@ getSomethingForMe('url')
 
 // They both work at the same time</code></pre></div></div></section></section><section><div class="sl-block" data-block-type="text" data-block-id="60ff64ac73fc12139460d355df372fae" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 276px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <h2>Let's rewrite our callback example</h2>
-</div></div></section><section data-id="e37bb081336f914ba8d98ef50a7b7ff7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="d3efa22311f7ea81b9ce4271ee6fc04b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+</div></div></section><section class="stack"><section data-id="e37bb081336f914ba8d98ef50a7b7ff7"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="d3efa22311f7ea81b9ce4271ee6fc04b"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Even <s>Fancier</s> Shorter</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" style="width: 472px; height: 560px; left: 0px; top: 140px;" data-block-id="d255ee764d6b4da38a3b3061ecabde49"><div class="sl-block-content" style="z-index: 11;"><pre><code>var data;
@@ -258,15 +303,46 @@ fs.readFile('data.json')
   });</code></pre></div></div>
 <div class="sl-block" data-block-type="code" style="width: 470px; height: 560px; left: 490px; top: 140px;" data-block-id="d9ea7508f24c3b4120f6b30954d9252f"><div class="sl-block-content" style="z-index: 13;"><pre><code>// Look! Mom, it's a generator!
 var run = Bluebird.coroutine(function* () {
-
   var buf = yield fs.readFile('data.json');
-
   var data = JSON.parse(buf.toString());
-
   var body = yield request.get(data.imageUrl);
-
   yield s3.upload(body);
+  yield database.insert(data);
+  for (var i = 0; i &lt; data.emails; i++) {
+    yield Mailer.send(data, data.emails[i]);
+  }
+  console.log('I am rocking!');
+});
 
+// You get a promise
+run()
+  .catch(function (err) {
+    console.error(err);
+  });</code></pre></div></div></section><section data-id="4b90ad9c63e86c6a29dc2ecb728d4556"><div class="sl-block" data-block-type="code" data-block-id="974d5592e266b026dfddd5c36eee5c41" style="min-width: 30px; min-height: 30px; width: 467px; height: 560px; left: 493px; top: 70px;"><div class="sl-block-content" style="z-index: 10;"><pre><code>// Look! Mom, no Bluebird, no Generator!
+async function run() {
+  var buf = await fs.readFile('data.json');
+  var data = JSON.parse(buf.toString());
+  var args = await request.get(data.url);
+  body = args[1];
+  await s3.upload(body.image);
+  await database.insert(data);
+
+  for (var i = 0; i &lt; data.emails; i++) {
+    await Mailer.send(data, data.emails[i]);
+  }
+
+  console.log('I am rocking!');
+}
+
+// You can treat it as a promise
+run().then().then().then();</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 467px; height: 560px; left: 0px; top: 70px;" data-block-id="28a6d0518bb6d8adbf727d2661a68171"><div class="sl-block-content" style="z-index: 12;"><pre><code>// Look! Mom, it's a generator!
+var run = Bluebird.coroutine(function* () {
+  var buf = yield fs.readFile('data.json');
+  var data = JSON.parse(buf.toString());
+  var args = yield request.get(data.url);
+  body = args[1];
+  yield s3.upload(body.image);
   yield database.insert(data);
 
   for (var i = 0; i &lt; data.emails; i++) {
@@ -276,10 +352,7 @@ var run = Bluebird.coroutine(function* () {
   console.log('I am rocking!');
 });
 
-// You can deal with async errors
-run().catch(function (err) {
-  console.error(err);
-});</code></pre></div></div></section><section data-id="838e4e785c17298bd380210b54d6ee5f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="e8ee6bf3f55522a57e02cb6815297bcc"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+run();</code></pre></div></div></section></section><section data-id="838e4e785c17298bd380210b54d6ee5f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="e8ee6bf3f55522a57e02cb6815297bcc"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Enhance with Lodash</h2>
 </div></div>
 <div class="sl-block" data-block-type="code" data-block-id="ae43cadacc5cac162644642ae8cac6da" style="min-width: 30px; min-height: 30px; width: 800px; height: 560px; left: 80px; top: 121px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>var _ = require('lodash');
@@ -307,87 +380,39 @@ fs.readdirAsync(".")
         return data.count + " total files beginning with " + data.firstCh + " with total size of " + data.totalSize + " bytes";
     })
     .call("join", "\n")
-    .then(console.log)</code></pre></div></div></section><section class="stack" data-id="81533b997578e8677533dec5546a872c"><section data-id="e9fa5937ad3da53db83b2d505ecf695f"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="47a36ca14a1f96726ca028feaf997d50"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text">
-<h2>Why should we care?</h2>
+    .then(console.log)</code></pre></div></div></section><section class="stack"><section><div class="sl-block" data-block-type="text" data-block-id="005cd9d004fee4b9c5f86443f7b22190" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 186px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:left">"Bluebird is awesome.</p>
+
+<p style="text-align:left">But does that mean if one of my library already uses another promise library, I have to switch to another library."</p>
 </div></div>
-<div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 140px; height: auto;" data-block-id="9ca97948f03f5ccc17ef094d3fc64c47"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="text-align: left;">
-<p>Besides all the benefits we already mentioned</p>
-
-<ul>
-	<li>ES6 natively supports Promise class</li>
-	<li>More and more APIs support the promise interface
-	<ul>
-		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">fetch() </a></li>
-		<li>jQuery has supported Thenables for a long time
-		<ul>
-			<li>$.get(url).then()</li>
-		</ul>
-		</li>
-	</ul>
-	</li>
-	<li>ES7 async/await works with promise</li>
-</ul>
-</div></div></section><section data-id="4b90ad9c63e86c6a29dc2ecb728d4556"><div class="sl-block" data-block-type="code" data-block-id="974d5592e266b026dfddd5c36eee5c41" style="min-width: 30px; min-height: 30px; width: 480px; height: 560px; left: 480px; top: 70px;"><div class="sl-block-content" style="z-index: 10;"><pre><code>// Look! Mom, no Bluebird, no Generator!
-var run = async function () {
-
-  var content = await fs.readFile('data.json');
-
-  var data = JSON.parse(content.toString());
-
-  var args = await request.get(data.url);
-
-  body = args[1];
-
-  await s3.upload(body.image);
-
-  await database.insert(data);
-
-  for (var i = 0; i &lt; data.emails; i++) {
-    await Mailer.send(data, data.emails[i]);
-  }
-
-  console.log('I am rocking!');
-});
-
-// You can treat it as a promise
-run().then().then().then();</code></pre></div></div>
-<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 480px; height: 560px; left: 0px; top: 70px;" data-block-id="28a6d0518bb6d8adbf727d2661a68171"><div class="sl-block-content" style="z-index: 12;"><pre><code>// Look! Mom, it's a generator!
-var run = Bluebird.coroutine(function* () {
-
-  var content = yield fs.readFile('data.json');
-
-  var data = JSON.parse(content.toString());
-
-  var args = yield request.get(data.url);
-
-  body = args[1];
-
-  yield s3.upload(body.image);
-
-  yield database.insert(data);
-
-  for (var i = 0; i &lt; data.emails; i++) {
-    yield Mailer.send(data, data.emails[i]);
-  }
-
-  console.log('I am rocking!');
-});
-
-run();</code></pre></div></div></section></section><section data-id="ebae5d9f27c0989bababb749b0e3c66a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="f5792519f78ac6f1651978a7ae0a5693"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<div class="sl-block" data-block-type="text" data-block-id="b195d635bb8d8265827e8281bb482ad3" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 420px;"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left;" data-fragment-index="0">
+<h2>Promise is <span style="color:#0000FF">convertible</span>
+</h2>
+</div></div></section><section><div class="sl-block" data-block-type="code" data-block-id="cca4cc537a315dfca62dc5f056be182d" style="min-width: 30px; min-height: 30px; width: 800px; height: 385px; left: 80px; top: 158px;"><div class="sl-block-content" style="z-index: 11; font-size: 158%;"><pre><code>Promise
+    .resolve($.get("http://www.google.com"))
+    .then(function() {
+        return $.post("http://www.yahoo.com");
+    })
+    .then(function() {
+        console.log('Something');
+    })
+    .catch(function(err) {
+        console.log(err.statusText);
+    });</code></pre></div></div></section></section><section data-id="ebae5d9f27c0989bababb749b0e3c66a"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="f5792519f78ac6f1651978a7ae0a5693"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>What about async.js?</h2>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="07d022625790bfee427fa54910457594" style="min-width: 30px; min-height: 30px; width: 640px; height: 352px; left: 160px; top: 174px;"><div class="sl-block-content" style="z-index: 12;"><pre><code>async.waterfall([
+<div class="sl-block" data-block-type="code" data-block-id="07d022625790bfee427fa54910457594" style="min-width: 30px; min-height: 30px; width: 960px; height: 562px; left: 0px; top: 138px;"><div class="sl-block-content" style="z-index: 12; font-size: 154%;"><pre><code>async.waterfall([
 
-  function(callback) {
+  function (callback) {
     throw new Error(123);
   },
 
-  function(things, callback) {
+  function (things, callback) {
     // You start to nesting callbacks again
     async.each(things)
   },
 
-  function(callback) {
+  function (callback) {
   }
 
 ], function (err, result) {
@@ -404,7 +429,7 @@ run();</code></pre></div></div></section></section><section data-id="ebae5d9f27c
 
 <p style="text-align:left"> </p>
 
-<p style="text-align:left">A lot of promise libraries are slow, e.g. Q. It doesn't mean promise is slow. <span style="text-align:left">Bluebird is 100x faster than Q, and consumes only 5% memory.</span></p>
+<p style="text-align:left">A lot of promise libraries are slow, e.g. Q. But it doesn't mean Promise is slow. <span style="text-align:left">Bluebird is 100x faster than Q, and consumes only 5% memory.</span></p>
 </div></div></section><section data-id="7c3bc9c4b07733a42e8ffa0ccd97ceb3"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 33px; height: auto;" data-block-id="62b8dd24e60b9d9806a046a0932553c9"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 11;" dir="ui">
 <h2>We still need callbacks</h2>
 </div></div>
@@ -412,7 +437,7 @@ run();</code></pre></div></div></section></section><section data-id="ebae5d9f27c
 <ul>
 	<li>To work with event listeners</li>
 	<li>Streams</li>
-	<li>No need to convert everything to promise if it's just one level callback</li>
+	<li>No need to convert everything to Promise if it's just a one level callback</li>
 	<li>When you want to squeeze last drop of performance</li>
 </ul>
 </div></div></section><section data-id="870bef929380562477e47a9778e3e091"><div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;" data-block-id="822237a9f848e5b91cb38a72411f7ff6"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
@@ -429,7 +454,7 @@ run();</code></pre></div></div></section></section><section data-id="ebae5d9f27c
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":331860,"username":"daiweilu","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/cdb57618cf028c2a58191b7396a1fbe0?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":false,"enterprise":false,"enterprise_manager":false,"settings":{"id":162566,"present_controls":true,"present_upsizing":true,"editor_grid":true,"editor_snap":true,"developer_mode":true},"registered":true,"email":"daiweilu123@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true},"deck":{"id":422186,"slug":"tame-your-callbacks","title":"tame-your-callbacks","description":"","visibility":"all","published_at":"2015-05-23T22:41:19.529Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/487815/decks.jpg","view_count":24,"user":{"id":331860,"username":"daiweilu","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/cdb57618cf028c2a58191b7396a1fbe0?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":false,"enterprise":false,"enterprise_manager":false,"settings":{"id":162566,"present_controls":true,"present_upsizing":true},"registered":true},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"access_token":"FQeK4bcxABVk71uT7LJRDRhkTs4r","notes":{"283242c5727ce6e94b9c58ba0fb5dca2":"http://tame-your-callback.s3-website-us-east-1.amazonaws.com/image.svg"}}};
+	var SLConfig = {"current_user":{"id":331860,"username":"daiweilu","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/cdb57618cf028c2a58191b7396a1fbe0?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":false,"enterprise":false,"enterprise_manager":false,"settings":{"id":162566,"present_controls":true,"present_upsizing":true,"editor_grid":true,"editor_snap":true,"developer_mode":true},"registered":true,"email":"daiweilu123@gmail.com","notify_on_receipt":true,"billing_address":null,"editor_tutorial_completed":true},"deck":{"id":422186,"slug":"tame-your-callbacks","title":"tame-your-callbacks","description":"","visibility":"all","published_at":"2015-05-23T22:41:19.529Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/secure/487815/decks.jpg","view_count":28,"user":{"id":331860,"username":"daiweilu","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/cdb57618cf028c2a58191b7396a1fbe0?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","pro":false,"enterprise":false,"enterprise_manager":false,"settings":{"id":162566,"present_controls":true,"present_upsizing":true},"registered":true},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"rtl":false,"version":2,"access_token":"FQeK4bcxABVk71uT7LJRDRhkTs4r","notes":{"283242c5727ce6e94b9c58ba0fb5dca2":"http://tame-your-callback.s3-website-us-east-1.amazonaws.com/image.svg"}}};
 </script>
 
 		<script>

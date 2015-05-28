@@ -10,14 +10,14 @@ var requestAsync = Bluebird.promisify(request);
 Bluebird.promisifyAll(database);
 Bluebird.promisifyAll(mailer);
 
-// Level 0
 fs.readFileAsync('data.json')
   .bind({})
   .then(function (buf) {
     this.data = JSON.parse(buf.toString());
     return requestAsync(this.data.image_url);
   })
-  .spread(function (res, body) {
+  .get(1)
+  .then(function (body) {
     return s3.putObject({
       Bucket: 'tame-your-callback',
       ContentType: 'image/svg+xml',
@@ -27,10 +27,7 @@ fs.readFileAsync('data.json')
     });
   })
   .then(function () {
-    return database.insertAsync(this.data);
-  })
-  .then(function () {
-    return this.data.emails;
+    return database.insertAsync(this.data).return(this.data.emails);
   })
   .each(function (email) {
     return mailer.sendAsync(this.data, email);
